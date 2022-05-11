@@ -6,24 +6,22 @@ const calcIMC = () => {
 
   if (altura.value !== '' && peso.value !== '') {
     const imc = (peso.value / (altura.value * altura.value)).toFixed(2)
-    let classification = ''
+    let clasificacion = ''
 
     if (imc < 18.5) {
-      classification = 'abajo de peso'
+      clasificacion = 'abajo de peso'
     } else if (imc < 25) {
-      classification = 'Peso normal'
+      clasificacion = 'Peso normal'
     } else if (imc < 30) {
-      classification = 'encima del peso'
+      classificaion = 'encima del peso'
     } else if (imc < 35) {
-      classification = 'obesidad de grado 1'
+      clasificacion = 'obesidad de grado 1'
     } else if (imc < 41) {
-      classification = 'obesidad de grado 2'
+      clasificacion = 'obesidad de grado 2'
     } else {
-      classification = 'obesidad de grado 3'
+      clasificacion = 'obesidad de grado 3'
     }
     
-    resultado.innerHTML = `IMC: ${imc} (${classification})`
-  } else {
-    resultado.innerHTML = 'Preencha os campos'
-  }
+    resultado.innerHTML = `IMC: ${imc} (${clasificacion})`
+  } 
 }
